@@ -1,28 +1,23 @@
-== README
+== Installation
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+needs a  PostGIS 2.1 database with pgrouting support on top of Postgresql 9.2/9.3
 
-Things you may want to cover:
+start initial import process with rake:routing:initial_import. This takes several hours for the whole world.
 
-* Ruby version
+== Api Documentation
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+request endpoint: /api/v1/catchment.json
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Requests take the following parameters (All requests authenticate with an auth_token with has to be created in the backend)
+
+- lat (Latitude of the origin)
+- lng (Longitude of the origin)
+- max_time (in minutes, takes any Integer between 5 and 60)
+- mode (may be "car" or "rail")
+
+Returns a geojson wich can be overlayed on the map for P-i-P querying and else.
+
+
+
+
