@@ -2,6 +2,10 @@
 
 needs a  PostGIS 2.1 database with pgrouting support on top of Postgresql 9.2/9.3
 
+on OSX, use this formula: 
+
+brew install https://raw.github.com/mbrookes/homebrew/12624fcbe2fd64bd2f757990fe864b77d85d7cd8/Library/Formula/pgrouting.rb
+
 start initial import process with rake:routing:initial_import. This takes several hours for the whole world.
 
 == Api Documentation
