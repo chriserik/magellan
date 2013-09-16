@@ -43,3 +43,27 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'devise'
+gem 'yajl-ruby'
+gem 'rgeo'
+gem 'rgeo-geojson'
+
+# asynchronous processing
+gem 'sidekiq'
+gem 'redis'
+gem 'puma'
+gem 'clockwork'
+
+# testing
+group :test, :development do
+	gem 'factory_girl'
+	gem "factory_girl_rails", "~> 4.0"
+	gem "rspec-rails"
+	gem "rspec"
+	gem 'guard'
+  gem 'guard-rspec'
+  gem 'rb-inotify', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-fchange', require: false
+end
